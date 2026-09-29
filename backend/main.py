@@ -4,6 +4,6 @@ app = FastAPI()
 
 @app.get("/")
 def home():
-    return{
+    return {
         "welcome":"to the fastapi"
     }
