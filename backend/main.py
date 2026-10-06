@@ -1,9 +1,12 @@
 from fastapi import FastAPI
+from routers import auth
 
 app = FastAPI()
 
+app.include_router(auth.router, prefix="/auth", tags=["auth"])
+
 @app.get("/")
 def home():
-    return{
-        "welcome":"to the fastapi"
+    return {
+        "welcome": "to the fastapi"
     }
